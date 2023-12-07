@@ -1,0 +1,32 @@
+.signin-view {
+    display: flex;
+    padding: 24px;
+    margin-top: 15px;
+    align-items: center;
+    flex-direction: column;
+    .header {
+        margin-bottom: 20px;
+        img {
+            width: 180px;
+            height: auto;
+        }
+    }
+    .offline-sub-header {
+        .wifi-off-icon {
+            color: #fff;
+            background-color: #ffa41d;
+            margin: 0 auto;
+        }
+    }
+    .form {
+        width: 100%;
+        margin-top: 8px;
+    }
+    .submit {
+        margin: 24px 0px 16px;
+    }
+    .copy-right {
+        position: absolute;
+        bottom: 20px;
+    }
+}

@@ -1,0 +1,153 @@
+.tracker-view {
+    height: 97vh;
+    .today-time-summary-component{
+        .total-time{
+            text-align: center;
+        }
+        .active-time{
+            text-align: center;
+            p {
+                color: #48a14d;
+            }
+        }
+        .idle-time{
+            text-align: center;
+            p {
+                color: #ffa41d;
+            }
+        }
+    }
+    .header-component {
+        .header {
+            display: flex;
+            height: 40px;
+            max-height: 100%;
+            padding-top: 0px;
+            padding-bottom: 10px;
+            .header-text {
+                margin-left: 0px;
+                color: #5f5f5f;
+            }
+            .header-sub-text {
+                display: block;
+                max-width: 6.5rem;
+                color: #b1b1b1;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            .status {
+                padding-top: 5px;
+                .MuiChip-root {
+                    color: #fff;
+                    background-color: #ffa41d;
+                    .MuiChip-icon {
+                        color: #fff;
+                    }
+                }
+            }
+            .timer {
+                margin-left: auto;
+                margin-right: 0px;
+                padding-top: 5px;
+                color: #5f5f5f;
+            }
+        }
+    }
+    .project-list-component {
+        .project-list {
+            height: calc(100vh - 16.5rem);
+            background-color: #e9e9e9;
+            margin-top: 10px;
+            margin-bottom: 3px;
+            overflow-y: hidden;
+            &:hover {
+                overflow-y: auto;
+            }
+            .MuiList-padding {
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
+            .project {
+                margin: 5px;
+                margin-bottom: 0px;
+                height: 30px;
+                .MuiButtonBase-root {
+                    height: 30px;
+                }
+                .MuiRadio-colorPrimary.Mui-checked {
+                    color: #48a14d;
+                }
+                .MuiListItemText-secondary {
+                    font-size: small;
+                }
+                .MuiListItem-gutters {
+                    padding-left: 8px;
+                    padding-right: 8px;
+                }
+                .project-list-item {
+                    border-radius: 4px;
+                    border: 2px solid transparent;
+                    background-color: #ffffff;
+
+                    &:not(.Mui-selected):hover {
+                        border-color: #48a14c69;
+                    }
+                }
+                .Mui-selected {
+                    border-color: #48a14d;
+                }
+            }
+        }
+    }
+    .footer-component {
+        .process-status-component {
+            margin-left: 5px;
+            height: 25px;
+            max-height: 100%;
+            display: flex;
+            .process-status-icon {
+                color: #48a14d;
+                font-size: larger;
+            }
+            .message {
+                color: #b1b1b1;
+                margin-left: 3px;
+                font-weight: normal;
+                font-size: small;
+            }
+
+            @mixin animate($animation,$duration,$method,$times){
+                animation: $animation $duration $method $times;
+            }
+
+            @mixin keyframes($name){
+                @keyframes #{$name}{
+                    @content;
+                }
+            }
+            
+            .spinner {
+                @include animate(spin, 4s, linear, infinite);
+            }
+            
+            @include keyframes(spin) {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(-360deg); }
+           }
+        }
+        .tracker-button-component {
+            margin-top: 5px;
+            height: 55px;
+            max-height: 100%;
+            .start-button {
+                background-color: #48a14d;
+                height: 55px;
+            }
+            .stop-button {
+                background-color: #d14143;
+                height: 55px;
+            }
+        }
+    }
+}

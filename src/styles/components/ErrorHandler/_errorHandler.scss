@@ -1,0 +1,12 @@
+.error-handler-dialog {
+    .error-message{
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        .label {
+            color: black
+        }
+        .message {
+            color: red;
+        }
+    }    
+}

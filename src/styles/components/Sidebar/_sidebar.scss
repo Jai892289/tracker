@@ -1,0 +1,65 @@
+.sidebar-component {
+  display: flex;
+  .drawer {
+    width: $drawer-width;
+    flex-shrink: 0;
+  }
+  .drawer-paper {
+    width: $drawer-width;
+  }
+  .sidebar-list {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .sidebar-list-Item {
+    display: block;
+    text-align: center;
+  }
+  .MuiListItem-gutters{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .sidebar-list-avatar-icon{
+    margin: 0 auto;
+    background-color: #5f5f5f;
+    height: 35px;
+    width: 35px;
+  }
+  .sidebar-list-icon {
+    margin: 0 auto;
+    color: #5f5f5f;
+    height: 33px;
+  }
+  .sidebar-list-text{
+    .MuiTypography-body1{
+      font-size: small;
+      font-weight: normal;
+      color: #5f5f5f;
+    }
+  }
+  .sidebar-bottom-list {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: auto;
+    margin-bottom: 10px;
+    display: flex;
+  }
+  .sidebar-bottom-list-Item {
+    display: block;
+    text-align: center;
+  }
+  .sidebar-bottom-list-icon {
+    margin: 0 auto;
+    color: #5f5f5f;
+    .day-end-report{
+      margin-left: 10px;
+    }
+    .logout{
+      margin-right: 10px;
+    }
+  }
+  .MuiListItemAvatar-root{
+    min-width: 30px;
+    flex-shrink: 0;
+  }
+}
